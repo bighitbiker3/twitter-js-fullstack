@@ -2,10 +2,13 @@
   "name": "twitter-js",
   "version": "1.0.0",
   "description": "FS workshop",
-  "main": "index.js",
+  "main": "nodemon app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
