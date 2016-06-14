@@ -10,8 +10,6 @@ app.set('views', __dirname + '/views');
 
 swig.setDefaults({cache: false});
 
-
-
 app.use(function(req, res, next){
   console.log(req.method, req.url, res.statusCode);
   next();
