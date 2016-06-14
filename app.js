@@ -3,7 +3,7 @@ var app = express();
 var swig = require('swig');
 var routes = require('./routes/');
 var bodyParser = require('body-parser');
-
+var socketio = require('socket.io');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -11,8 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static('public'));
-
-app.use('/', routes);
 
 app.engine('html', swig.renderFile);
 
@@ -28,4 +26,7 @@ app.use(function(req, res, next){
 });
 
 
-app.listen(3000);
+var server = app.listen(3000);
+var io = socketio.listen(server);
+
+app.use('/', routes(io));
