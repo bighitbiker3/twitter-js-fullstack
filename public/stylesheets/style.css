@@ -51,9 +51,24 @@ code {
   width: 48px;
   content:url("http://lorempixel.com/48/48");
 }
+
 .content {
   margin-left: 60px;
+  margin-bottom: 20px;
 }
 .content .by {
   font-weight: bold;
+}
+.content a {
+  margin-left: 0px;
+}
+.authorPic{
+  float: left;
+  margin-right: 10px;
+}
+.tweet{
+  margin-bottom: 0px;
+}
+.by{
+  margin-bottom: 0px;
 }
