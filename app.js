@@ -2,6 +2,13 @@ var express = require('express');
 var app = express();
 var swig = require('swig');
 var routes = require('./routes/');
+var bodyParser = require('body-parser');
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.use(bodyParser.json());
 
 app.use(express.static('public'));
 
